@@ -9,6 +9,7 @@ import { ToastContainer } from "react-toastify";
 import NavBar from "./pages/NavBar";
 import Home from "./pages/Home";
 import Contacts from "./pages/Contacts";
+import Fun from "./pages/Fun";
 import history from "./utils/history";
 
 export default function App() {
@@ -21,6 +22,7 @@ export default function App() {
         </header>
         <Switch>
             <Route path="/" exact component={Home}/>
+            <Route path="/havefun" exact component={Fun}/>
             <Route path="/contacts" component={Contacts}/>
         </Switch>
     </Router>
