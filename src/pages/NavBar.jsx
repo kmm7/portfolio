@@ -39,6 +39,9 @@ export default function ButtonAppBar() {
     let title = '';
     // eslint-disable-next-line default-case
     switch (location.pathname) {
+        case '/HaveFun':
+            title = 'Have fun!';
+            break;
         case '/Contacts':
             title = 'Contacts';
             break;
@@ -67,10 +70,17 @@ export default function ButtonAppBar() {
                             history.push("/");
                             handleClose();
                         }}>Home</MenuItem>
+
+                        <MenuItem onClick={() => {
+                            history.push('/HaveFun');
+                            handleClose();
+                        }}>Have fun</MenuItem>
+
                         <MenuItem onClick={() => {
                             history.push('/Contacts');
                             handleClose();
                         }}>Contact</MenuItem>
+                        
                     </Menu>
                     <Typography variant="h6" className={classes.title}>
                         {title}
